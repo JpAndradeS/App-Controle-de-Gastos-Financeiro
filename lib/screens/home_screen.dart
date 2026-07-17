@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'add_transaction_screen.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({
@@ -96,8 +97,14 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Adicionar movimentação',
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const AddTransactionScreen(),
+            ),
+          );
+        },
         child: const Icon(Icons.add),
       ),
     );
